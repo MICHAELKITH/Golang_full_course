@@ -1,10 +1,8 @@
-package main
+package main 
 
-import (
+import(
 	"fmt"
 )
-
-
-func main (){
-	fmt.Println("Hello world")
+func main(){
+	fmt.Println("Hello _ world in Go")
 }

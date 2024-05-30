@@ -61,6 +61,8 @@ func main(){
 	elements["C"]="Cat"
 	elements["D"]="Dog"
 	elements["M"]="Mouse"
+	elements["U"]="Dog"
+	elements["B"]="Mouse"
 
 
 	if name, ok := elements["K"]; ok{

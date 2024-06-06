@@ -27,6 +27,20 @@ fmt.Println("===pointer val===")
 fmt.Println(*val) // print a value of x
 fmt.Println(val) // print address of x
 
+//working with pointers
+var creature string = "shark"
+
+var pointer *string = &creature
 
 
+fmt.Println("*pointer", pointer) //address
+fmt.Println("creature", creature) //shark
+
+fmt.Println("*pointer", *pointer) //shark
+fmt.Println("creature", creature) //shark
+
+*pointer = "snake"
+
+fmt.Println("*pointer", *pointer) //snake
+fmt.Println("creature", creature)  //snake 
 }

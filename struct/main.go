@@ -1,21 +1,45 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
-type Name struct {
+type Employee struct {
+
+	//field
+
 	id      int
 	name    string
 	country string
+	created time.Time
 }
 
 func main() {
-	var name Name
+	//declare variable
 
-	newName := new(Name)
+	var emp Employee
+	newEmp := new(Employee)
 
-	newName.id = 5
-	name.id = 5
+	//set values
 
-	fmt.Println("name id", name.id)
-	fmt.Println("name id", newName.id)
+	emp.id = 1
+	emp.name = "name"
+	emp.country = "Kenya"
+	emp.created = time.Now()
+
+	newEmp.id = 2
+	newEmp.name = "David"
+	newEmp.country = "Nigeria"
+	newEmp.created = time.Now()
+	
+	fmt.Println(emp.id)
+	fmt.Println(emp.name)
+	fmt.Println(emp.country)
+	fmt.Println(emp.created)
+	fmt.Println("=====")
+	fmt.Println(newEmp.id)
+	fmt.Println(newEmp.name)
+	fmt.Println(newEmp.country)
+	fmt.Println(newEmp.created)
 }

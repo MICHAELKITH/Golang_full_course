@@ -7,42 +7,52 @@ import (
 )
 
 func main() {
-	// Write data into a file
-	fmt.Println("Writing data into a file")
-	err := writeFile("Welcome to Go!")
+
+	fmt.Println("Writing content:")
+	err := WriteFile("You created your first go file")
+
 	if err != nil {
-		log.Fatalf("Failed to write file: %v", err)
+		log.Fatalf("Failed to write our file: %v", err)
 	}
 
-	// Read data from the file
-	fmt.Println("Reading data from the file")
+	fmt.Println("Reading file")
 	content, err := readFile()
+
 	if err != nil {
-		log.Fatalf("Failed to read file: %v", err)
+		log.Fatalf("Failed to write our file: %v", err)
 	}
 	fmt.Println("File content:")
 	fmt.Println(content)
 }
 
-func writeFile(message string) error {
-	file, err := os.Create("testgo.txt")
-	if err != nil {
+func WriteFile(message string) error{
+
+	file, err := os.Create("test.txt")
+
+	if err != nil{
 		return err
 	}
+
 	defer file.Close()
 
 	_, err = file.WriteString(message)
-	if err != nil {
+
+	if err != nil{
 		return err
 	}
+
 	fmt.Println("File created successfully")
+
 	return nil
 }
 
-func readFile() (string, error) {
-	bytes, err := os.ReadFile("testgo.txt")
+
+func readFile() (string, error){
+	bytes, err := os.ReadFile("test.txt")
+
 	if err != nil {
 		return "", err
 	}
-	return string(bytes), nil
+
+	return string(bytes), err
 }

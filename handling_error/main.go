@@ -8,7 +8,7 @@ func main() {
 		if r := recover()
 		r != nil {
 			fmt.Println("System recovered\n", r)
-			fmt.Println("This line will  be executed")
+			fmt.Println("This line will  be executed!")
 			errHandle()
 		}
 	}()

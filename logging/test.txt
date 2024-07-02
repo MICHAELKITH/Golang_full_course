@@ -1,0 +1,3 @@
+APP:2024/07/02 11:43:53 main.go:58: This error message one
+APP:2024/07/02 11:43:53 main.go:59: This error message two
+APP:2024/07/02 11:43:53 main.go:60: This error message three

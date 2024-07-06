@@ -1,4 +1,3 @@
-// WaitGroups
 package main
 
 import (
@@ -6,25 +5,29 @@ import (
 	"sync"
 )
 
+func main() {
 
-func main ()  {
-	var wg  sync.WaitGroup
+	var wg sync.WaitGroup
+	//Add method
 
-	for i:=1; i <=5; i++{
-		wg.Add(1)
+	wg.Add(3)
+	fmt.Println("Start")
+	go count("Runner 1",  &wg)
+	go count("Runner 2",  &wg)
+	go count("Runner 3",  &wg)
 
-		go func (){
-			defer wg.Done()
-
-			student(i)
-		}()
-	}
+	//sleep our program
 	wg.Wait()
+
+	fmt.Print("Stopped")
 }
 
-func student(id int){
+func count(value string, wg *sync.WaitGroup){
+	fmt.Println(value , "STARTED")
 
-	fmt.Printf("Student %d starting\n",  id)
+	defer wg.Done()
 
-
+	for i:=1; i<=5; i++{
+		fmt.Println(value, i)
+	}
 }

@@ -11,7 +11,7 @@ func main() {
 	//Add method
 
 	wg.Add(3)
-	fmt.Println("Start")
+	fmt.Println("Starting")
 	go count("Runner 1",  &wg)
 	go count("Runner 2",  &wg)
 	go count("Runner 3",  &wg)

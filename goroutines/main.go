@@ -19,7 +19,7 @@ func main() {
 	//sleep our program
 	wg.Wait()
 
-	fmt.Print("Stopped")
+	fmt.Print("Stopped Running")
 }
 
 func count(value string, wg *sync.WaitGroup){

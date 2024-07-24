@@ -27,7 +27,7 @@ func count(value string, wg *sync.WaitGroup){
 
 	defer wg.Done()
 
-	for i:=1; i<=5; i++{
+	for i:=1; i<=10; i++{
 		fmt.Println(value, i)
 	}
 }
